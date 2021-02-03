@@ -1,0 +1,54 @@
+#include <iostream.h>
+using namespace std;
+float area(float r)
+{
+    cout<<"\nArea of the circle is "<<3.142*r*r;
+}
+double area(double x,double y)
+{
+    cout<<"\nArea of triangle is "<<0.5*x*y;
+}
+int area(int l,int b)
+{
+    cout<<"\nArea of rectangle is "<<l*b;
+}
+int main()
+{
+    int choice,breadth,length;
+    float radius;
+    double base,height;
+
+    cout<<"\nEnter 1 for circle ";
+    cout<<"\nEnter 2 for triangle";
+    cout<<"\nEnter 3 for rectangle";
+    cout<<"\nEnter your choice  ";
+    cin>>choice;
+    switch(choice)
+    {
+        case 1:
+        cout<<"\nEnter the radius of circle ";
+        cin>>radius;
+        area(radius);
+        break;
+
+        case 2:
+        cout<<"\nEnter the base ";
+        cin>>base;
+        cout<<"\nEnter the height ";
+        cin>>height;
+        area(base,height);
+        break;
+
+        case 3:
+        cout<<"\nEnter the length";
+        cin>>length;
+        cout<<"\nEnter the breadth";
+        cin>>breadth;
+        area(length,breadth);
+        break;
+        default:cout<<"\nWrong choice";
+
+
+    }
+    return 0;
+}
